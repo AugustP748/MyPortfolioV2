@@ -21,10 +21,10 @@
                 <div class="bannerBtnCol">
                   <div class="row">
                     <div class="col-auto">
-                      <a download href="{{me.userprofile.cv.url}}" class="btn btnPrimary">Download Resume</a>
+                      <a download href="{{me.userprofile.cv.url}}" class="btn btnPrimary">Descargar Curriculum</a>
                     </div>
                     <div class="col-auto">
-                      <a href="{% url 'main:contact' %}" class="btn btnOutline">Contact</a>
+                      <a href="{% url 'main:contact' %}" class="btn btnOutline">Contactar</a>
                     </div>
                   </div>
                 </div>
@@ -41,7 +41,7 @@
           <div class="row">
             <div class="col-md-auto">
               <div class="keySkillCol">
-                <h4 class="smTitle pb-3">Key Skills</h4>
+                <h4 class="smTitle pb-3">Habilidade duras</h4>
                 {% for sk in me.userprofile.skills.all %}
                 {% if sk.is_key_skill %}
                 <div class="keySkillCard">
@@ -57,12 +57,12 @@
               </div>
             </div>
             <div class="col-md">
-              <h4 class="smTitle pb-3">Coding Skills</h4>
+              <h4 class="smTitle pb-3">Nivel de habilidad</h4>
               <div class="progressCol">
                 <div class="progressCard">
                   {% for sk in me.userprofile.skills.all %}
                   {% if sk.is_key_skill %}
-                  <div class="progressCol">
+                  <div class="progressCol my-4">
                     <span class="progressLbl">{{sk.name}}</span>
                     <div class="row g-2 align-items-center">
                       <div class="col">
@@ -91,7 +91,7 @@
         <div class="container">
           <div class="row pb-3">
             <div class="col">
-              <h4 class="smText regular">Certificates</h4>
+              <h4 class="smText regular">Certificados & Cursos más destacados</h4>
             </div>
     
           </div>
@@ -131,10 +131,11 @@
           <div class="portfolioCol">
             <div class="row pb-3">
               <div class="col">
-                <h4 class="smText regular">Featured Work</h4>
+                <!-- <h4 class="smText regular">Featured Work</h4>-->
+                <h4 class="smText regular">Proyectos destacados</h4>
               </div>
               <div class="col-auto">
-                <a href="{% url 'main:portfolios' %}" class="simpleLink">View all</a>
+                <a href="{% url 'main:portfolios' %}" class="simpleLink">Ver todo</a>
               </div>
             </div>
             {% for p in portfolio %}
@@ -162,7 +163,7 @@
             
           </div>
           <div class="testimonialCol">
-            <h4 class="smText regular d-block">Testimonials</h4>
+            <h4 class="smText regular d-block">Testimonios</h4>
             <div class="testimonialSlider">
               <div class="swiper testimonialSwiper">
                 <div class="swiper-wrapper">
@@ -205,10 +206,10 @@
         <div class="container">
           <div class="row pb-3">
             <div class="col">
-              <h4 class="smText regular">Recent posts</h4>
+              <h4 class="smText regular">Postes más recientes</h4>
             </div>
             <div class="col-auto">
-              <a href="{% url 'main:blogs' %}" class="simpleLink">View all</a>
+              <a href="{% url 'main:blogs' %}" class="simpleLink">Ver todo</a>
             </div>
           </div>
           <div class="row g-3">
